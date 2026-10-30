@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PATH = "usr/local/bin:/opt/homebrew/bin:${env.PATH}"
+        PATH = "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:${env.PATH}"
     }
 
     stages {
@@ -13,7 +13,7 @@ pipeline {
             }
         }
 
-        stage('Run i') {
+        stage('Run image') {
             steps {
                 echo "Run application in Docker Container"
                 sh 'docker rm -f mycontainer || true'
