@@ -8,7 +8,7 @@ def register():
     return render_template("register.html")
 @app.route("/success")
 def success():
-    name=request.form.get("name")
+    name=request.args.get("name")
     return render_template("success.html",name=name)
 
 if __name__=="__main__":
