@@ -9,7 +9,7 @@ pipeline {
         stage('Build Docker image') {
             steps {
                 echo "Build Docker Image"
-                sh 'docker build -t myapp registrationapp:regevent'
+                sh 'docker build -t myapp'
             }
         }
 
