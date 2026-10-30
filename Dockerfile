@@ -1,4 +1,4 @@
-FROM python:3.13-slim-buster
+from python:3.13-slim-buster
 WORKDIR /app
 COPY . /app
 RUN pip install --no-cahce-dir -r requirements.txt
